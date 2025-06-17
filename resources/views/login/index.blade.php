@@ -52,7 +52,7 @@
                                 <a href="{{ route('register.index') }}" class="text-primary text-gradient font-weight-bold">Sign
                                     up</a>
                             </p>
-                        </form>
+                 </form>
               </div>
             </div>
           </div>
@@ -117,4 +117,15 @@
         }
     </script>
 
+@if (session('error'))
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    Swal.fire({
+        icon: 'error',
+        title: 'Email atau Password Salah',
+        text: "{{ session('error') }}",
+        confirmButtonText: 'OK'
+    });
+</script>
+@endif
     @endsection

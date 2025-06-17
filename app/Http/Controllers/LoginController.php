@@ -46,9 +46,10 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             return redirect()->route('admin.index')->with('success', 'Login Berhasil');
+        } else {
+            return redirect()->back()->with('error', 'Login Gagal')->withInput();
         }
 
-        return redirect()->back()->with('error', 'Login Gagal')->withInput();
 
     }
 

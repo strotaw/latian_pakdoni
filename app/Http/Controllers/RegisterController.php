@@ -49,7 +49,7 @@ class RegisterController extends Controller
 
     Auth::login($user);
 
-    return redirect()->route('admin.index')->with('success', 'Register berhasil, selamat datang!');
+    return redirect()->route('profile.index')->with('success', 'Register berhasil, selamat datang!');
 }
 
     /**

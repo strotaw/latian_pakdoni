@@ -11,5 +11,5 @@ Route::resource('/login', \App\Http\Controllers\LoginController::class);
 Route::resource('/admin', \App\Http\Controllers\AdminController::class);
 Route::resource('/profile', \App\Http\Controllers\ProfileController::class);
 
-Route::get('/logout', [\App\Http\Controllers\LoginController::class, 'logout'])->name('login.logout');
+Route::post('/logout', [\App\Http\Controllers\LoginController::class, 'logout'])->name('login.logout');
 
