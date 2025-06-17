@@ -110,7 +110,7 @@
                             <ul class="d-flex align-items-center dropdown-menu dropdown-menu-end px-2 py-3" aria-labelledby="userDropdown"
                                 style="min-width: 200px;">
                                 <li class="d-flex align-items-center gap-2 px-2 py-2">
-                                    <img src="{{ Auth::user()->foto ? asset('storage/' . Auth::user()->foto) : asset('assets/img/bruce-mars.jpg') }}"
+                                    <img src="{{ Auth::user()->foto ? asset('storage/' . Auth::user()->foto) : asset('be/assets/img/bruce-mars.jpg') }}"
                                         alt="Profile Photo" class="avatar avatar-sm rounded-circle"
                                         style="width: 30px; height: 30px; object-fit: cover;">
                                     <form method="POST" action="{{ route('login.logout') }}">
